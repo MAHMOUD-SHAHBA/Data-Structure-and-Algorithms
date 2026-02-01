@@ -23,7 +23,7 @@ Basic DSA Terminologies
 
     - Data                 >  Data are values or set of values.
 
-    - Data Item            >  Data item refers to single unit of       values.
+    - Data Item            >  Data item refers to single unit of values.
 
     - Group Items          > Data items that are divided into sub items are called as Group Items.
 
@@ -42,9 +42,17 @@ Basic DSA Terminologies
 
     :: 1 ::   Time and Space complexities
     .........................................
-    
-
-
+    - Space Complexity
+        Space complexity of an algorithm represents the amount of memory space required by the algorithm in its life cycle. 
+        The space required by an algorithm is equal to the sum of the following two components
+        1- A fixed part that is a space required to store certain data and variables,
+            that are independent of the size of the problem. For example, simple variables and constants used, program size, etc.
+        2- A variable part is a space required by variables, whose size depends on the size of the problem. 
+            For example, dynamic memory allocation, recursion stack space, etc.
+    - Time Complexity
+        https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm
+        https://www.geeksforgeeks.org/dsa/time-complexity-and-space-complexity/
+        
     
 
         
@@ -103,16 +111,7 @@ Basic DSA Terminologies
                         4. Print the ith value in the array and increment i.
                         5. Repeat Step 4 until the end of the array is reached.
                         6. End
-                    >>>>>>> Python Examople
-                        # Python code to iterate over a array using python
-                        LA = [1, 3, 5, 7, 8]
-                        # length of the elements
-                        length = len(LA)
-                        # Traversing the elements using For loop and range
-                        # same as 'for x in range(len(array))'
-                        print("Array elements are: ")
-                        for x in range(length):
-                            print("LA", [x], " = ", LA[x])
+
                 - Insertion >>> Adds an element at the given index
                     >>>>>>> An algorithm to insert elements into a Linear Array until we reach the end of the array 
                         1. Start
@@ -122,24 +121,7 @@ Basic DSA Terminologies
                         5. Increment i by 1.
                         6. Repeat Steps 4 & 5 until the end of the array.
                         7. Stop
-                    >>>>>>> Python Program to insert element using insert operation
-                        def insert(arr, element):
-                            arr.append(element)
-                        # Driver's code
-                        if __name__ == '__main__':
-                            # declaring array and value to insert
-                            LA = [0, 0, 0]
-                            x = 0
-                            # array before inserting an element
-                            print("Array Before Insertion: ")
-                            for x in range(len(LA)):
-                                print("LA", [x], " = " , LA[x])
-                            print("Inserting elements....")
-                            # array after Inserting element
-                            for x in range(len(LA)):
-                                LA.append(x);
-                                LA[x] = x+1;
-                            print("Array After Insertion: ")
+  
                 - Deletion  >>> Deletes an element at the given index.
                     >>>>>>> In this array operation, we delete an element from the particular index of an array
                         1. Start
@@ -149,24 +131,6 @@ Basic DSA Terminologies
                         5. Set J = J+1
                         6. Set N = N-1
                         7. Stop
-                    >>>>>>> Python program to delete the value using delete operation
-                        if __name__ == '__main__':
-                        # Declaring array and deleting value
-                        LA = [0,0,0]
-                        n = len(LA)
-                        print("Array Before Deletion: ")
-                        for x in range(len(LA)):
-                            LA.append(x)
-                            LA[x] = x + 3
-                            print("LA", [x], " = " , LA[x])
-                        # delete the value if exists 
-                        # or show error it does not exist in the list 
-                        for x in range(1, n-1):
-                            LA[x] = LA[x+1]
-                            n = n-1
-                        print("Array After Deletion: ")
-                        for x in range(n):
-                            print("LA", [x], " = " , LA[x])
 
                 - Search    >>> Searches an element using the given index or by the value.
                     >>>>>>> 
@@ -177,44 +141,13 @@ Basic DSA Terminologies
                         5. Set J = J +1
                         6. PRINT J, ITEM
                     >>>>>>> Python Example
-                        def findElement(arr, n, value):
-                            for i in range(n):
-                                if (arr[i] == value):
-                                    return i
-                            # If the key is not found
-                            return -1
-                        # Driver's code
-                        if __name__ == '__main__':
-                            LA = [1,3,5,7,8]
-                            print("Array element are: ")
-                            for x in range(len(LA)):
-                                print("LA", [x], " = ", LA[x])
-                            value = 5
-                            n = len(LA)
-                                # element found using search operation
-                            index = findElement(LA, n, value)
-                            if index != -1:
-                                print("Element", value, "Found at position = " + str(index + 1))
-                            else:
-                                print("Element not found")
 
                 - Update    >>> Updates an element at the given index
                     >>>>>>> refers to updating an existing element from the array at a given index.
                         1. Start
                         2. Set LA[K-1] = ITEM
                         3. Stop
-                    >>>>>>> Python Example
-                        #Declaring array elements
-                        LA = [1,3,5,7,8]
-                        #before updation
-                        print("The original array elements are :");
-                        for x in range(len(LA)):
-                            print("LA", [x], " = ", LA[x])
-                        #after updation
-                        LA[2] = 10
-                        print("The array elements after updation are: ")
-                        for x in range(len(LA)):
-                            print("LA", [x], " = ", LA[x])
+                      
                 - Display   >>> This operation displays all the elements in the entire array using a print statement
                     >>>>>>> print all elements inside the array
                         1. Start
@@ -353,13 +286,4 @@ Basic DSA Terminologies
 
     3.14- Branch and Bound Algorithm
 
-
 .......
-
-
-
-
-
-
-
-
